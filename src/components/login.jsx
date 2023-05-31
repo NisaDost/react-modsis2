@@ -1,11 +1,55 @@
-import React from 'react'
 import "./loginregister.css"
 import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import axios from "axios";
+
 
 
 function Login() {
 
-    const navigate = useNavigate();
+
+
+        const [email, setEmail] = useState("");
+        const [password, setPassword] = useState("");
+        const navigate = useNavigate();
+
+
+        async function login(event) {
+            event.preventDefault();
+            try {
+                await axios.post("http://localhost:8080/api/v1/user/login", {
+                    email: email,
+                    password: password,
+                }).then((res) =>
+                {
+                    console.log(res.data);
+
+                    if (res.data.message == "Email not exits")
+                    {
+                        alert("Email not exits");
+                    }
+                    else if(res.data.message == "Login Success")
+                    {
+
+                        navigate('/');
+                    }
+                    else
+                    {
+                        alert("Incorrect Email and Password not match");
+                    }
+                }, fail => {
+                    console.error(fail); // Error!
+                });
+            }
+
+
+            catch (err) {
+                alert(err);
+            }
+
+        }
+
+
 
     function handleClick(){
       navigate("/register")}
@@ -34,15 +78,24 @@ function Login() {
                 <p>Sipariş verebilmek için giriş yapmanız gerekiyor.</p>
             </div>
 
-            <form action="" className='container d-flex flex-column mt-2'>
+            <form action="/api/v1/user/login" method="post" className='container d-flex flex-column mt-2'>
                 <div className='container mb-4'>
                     <p className='mb-1'>E-mail</p>
-                    <input className='pxy-3' type="email" placeholder='birisi@example.com' name="" id="" required/>
+                    <input className='pxy-3' type="email" placeholder='birisi@example.com' name="email" id="email" required
+                           value={email}
+                           onChange={(event) => {
+                               setEmail(event.target.value);
+                           }}
+
+                    />
                 </div>
 
                 <div className='container mb-4'>
                     <p className='mb-1'>Şifre</p>
-                    <input className='pxy-3' type="password" placeholder='********' minLength={8} name="" id="" required/>
+                    <input className='pxy-3' type="password" placeholder='********' minLength={8} name="password" id="password" required value={password}
+                           onChange={(event) => {
+                               setPassword(event.target.value);
+                           }}/>
 
                     {/**şifremi unuttum işlevsiz */}
                     <a href=""><small>Şifremi Unuttum</small></a>
@@ -50,11 +103,11 @@ function Login() {
 
 
                 <div className='container mb-4 d-flex justify-content-center'>
-                <button className='btn w-100'><b>Giriş Yap</b></button>
+                    <button type="submit" className="btn btn-primary" onClick={login}>Login</button>
                 </div>
                     
                 <div className='container mb-3 text-center'>
-                    <p> Hesabınız yok mu? Hemen <a href="" onClick={handleClick}>kaydolun!</a></p>
+                        <p> Hesabınız yok mu? Hemen <a href="/register" onClick={handleClick}>kaydolun!</a></p>
                 </div>
             </form>
         </div>

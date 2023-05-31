@@ -1,11 +1,45 @@
-import React from 'react'
+import axios from "axios";
+
 import "./loginregister.css"
 import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
 
 
-function Login() {
+
+function Register() {
 
     const navigate = useNavigate();
+    const [firstName, setfirstName] = useState("");
+    const [lastName, setlastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+
+    async function save(event) {
+        event.preventDefault();
+        if (!firstName || !lastName || !email || !password) {
+            alert("Lütfen tüm alanları doldurun.");
+            return;
+
+        }
+        if (email.indexOf("@") === -1) {
+            alert("Geçerli bir e-posta adresi giriniz.");
+            return;
+        }
+        try {
+            await axios.post("http://localhost:8080/api/v1/user/save", {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password,
+            });
+            alert("Kayıt Başarılı");
+        } catch (err) {
+            alert(err);
+        }
+    }
+
+
 
     function handleClick(){
       navigate("/login")}
@@ -28,33 +62,54 @@ function Login() {
             </div>
 
 
-            <form action="" className='container d-flex flex-column mt-4'>
+            <form action="/api/v1/user/save" method="post" className='container d-flex flex-column mt-4'>
                 <div className='container mb-4 d-flex justify-content-between'>
                     <div className='yarıminput'>
                         <p className='mb-1'>Ad</p>
-                        <input  type="name" placeholder='Adınız...' name="" id="" required/>
+                        <input  type="text" placeholder='Adınız...' name="firstName" id="firstName" required
+                        value={firstName}
+                        onChange={(event) => {
+                        setfirstName(event.target.value);
+                    }}/>
                     </div>
                     <div className='yarıminput'>
                         <p className='mb-1'>Soyad</p>
-                        <input type="name" placeholder='Soyadınız...' name="" id="" required/>
+                        <input type="text" placeholder='Soyadınız...' name="lastName" id="lastName" required
+
+                               value={lastName}
+                               onChange={(event) => {
+                                   setlastName(event.target.value);
+                               }}
+                        />
                     </div>
                 </div>
 
 
                 <div className='container mb-4'>
                     <p className='mb-1'>E-mail</p>
-                    <input type="email" placeholder='birisi@example.com' name="" id="" required/>
+                    <input type="email" placeholder='birisi@example.com' name="email" id="email" required
+                           value={email}
+                           onChange={(event) => {
+                               setEmail(event.target.value);
+                           }}
+
+                    />
                 </div>
 
                 <div className='container mb-4'>
                     <p className='mb-1'>Şifre</p>
-                    <input type="password" placeholder='********' minLength={8} name="" id="" required/>
+                    <input type="password" placeholder='********' minLength={8} name="password" id="password" required
+                           value={password}
+                           onChange={(event) => {
+                               setPassword(event.target.value);
+                           }}/>
 
                 </div>
 
 
                 <div className='container mb-4 d-flex justify-content-center'>
-                <button className='btn w-100'><b>Giriş Yap</b></button>
+                    <button type="submit" className="btn btn-primary mt-4" onClick={save}>Save</button>
+
                 </div>
                     
                 <div className='container mb-3 text-center'>
@@ -67,4 +122,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Register
