@@ -1,0 +1,65 @@
+@media screen and (max-width: 480px){
+    .bg{
+   
+        padding-top: 25%;
+        height: 40vh;
+    }
+    .resim{
+        /*resim kayıyor*/
+        margin-top: -25%;
+        height: 40vh;
+        width: 60vw;
+    }
+    h1,h5,.card-title, .card-text,[role=button] {
+        font-size: 0.8rem;
+    }
+}
+.bg{
+    border: none;
+}
+.black{
+
+    height: 100%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+hr{
+    margin-left: 0;
+    border-color: white;
+}
+
+.kesfetbtn{
+    display: inline-block;
+    background-color: #ffc107;
+    color: black;
+
+}
+.kesfetbtn:hover{
+    text-decoration: none;
+    background-color: #dfdfdf;
+    color: black ;
+}
+.kesfetbtn:focus, .kesfetbtn:active{
+    border: none;
+    outline: none ;
+    box-shadow: none;
+}
+.ikonlar{
+    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+    z-index: 1;
+    position: relative;
+    border-top: 5px solid #ffc107;
+    border-bottom: 5px solid #ffc107;
+}
+@media screen and (max-width: 480px) {
+    .ikon{
+        width: 50%;
+    }
+    
+}
+.modeller{
+    background-color: #dfdfdf;
+    text-align: center;
+}

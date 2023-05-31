@@ -1,0 +1,33 @@
+.zindex{
+    z-index: 10000;
+    position: relative;
+}
+.blackfade{
+    width: 100%;
+    background: linear-gradient(to bottom,  rgb(0 0 0), rgba(0, 0, 0, 0));
+    position: absolute;
+
+}
+.logo{
+    width: 50%;
+}
+
+.btn{
+    background-color: #535353af;
+    border: none;
+    color: white;
+    
+}
+.btn:hover{
+    background-color: #ffc107;
+    color: black;
+
+}
+.btn:focus, .btn:active{
+    border: none;
+    outline: none ;
+    box-shadow: none;
+}
+.dropdown-menu{
+    background-color: #dfdfdf;
+}

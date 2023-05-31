@@ -1,0 +1,26 @@
+@media screen and (max-width: 1024px) {
+    .size{
+        width: 100%;
+    }
+    /*mobilde sıkıntı var*/
+}
+.size{
+    width: 29%;
+}
+.cardfade{
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.card-title, .card-text{
+    color: white;
+}
+
+.size:hover{
+    transform: scale(1.1);
+    border: none;
+    transition: all linear 200ms;
+    z-index: 1;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+}
+
