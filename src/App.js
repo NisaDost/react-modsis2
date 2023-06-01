@@ -2,7 +2,7 @@ import './App.css';
 import Home from './pages/home';
 import Login from "./components/login"
 import Register from "./components/register"
-import Modelpage from "./components/modelpage"
+import Modeldetails from "./components/modeldetails"
 
 
 
@@ -17,7 +17,7 @@ function App() {
         <Route path='/' element={<Home/>}  />
         <Route path='/login' element={<Login/>}  />
         <Route path='/register' element={<Register/>}  />
-        <Route path='/modelpage' element={<Modelpage/>}  />
+        <Route path='/modeldetails' element={<Modeldetails/>} />
 
 
         

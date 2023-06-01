@@ -103,7 +103,7 @@ function Login() {
 
 
                 <div className='container mb-4 d-flex justify-content-center'>
-                    <button type="submit" className="btn btn-primary" onClick={login}>Login</button>
+                    <button type="submit" className="btn w-100" onClick={login}>Giriş Yap</button>
                 </div>
                     
                 <div className='container mb-3 text-center'>

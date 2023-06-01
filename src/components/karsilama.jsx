@@ -59,17 +59,17 @@ function karsilama() {
           {/**mod slide */}
           <div className='d-flex flex-wrap align-items-center justify-content-center '>
 
-            <Modelcard img="\images\d98a83ef14b415c17779f6b67951d4a0.jpg" title="Mod Slide X Large" alt="msxl"  description= "a"/>
+            <Modelcard img="\images\d98a83ef14b415c17779f6b67951d4a0.jpg" title="Mod Slide X Large" alt="msxl"  description= "a" id="1"/>
 
-            <Modelcard img="\images\58ca768ef45ddddae56ae0202ce64d1d.jpg" title="Mod Slide Large" alt="msl"  description= "b"/>
+            <Modelcard img="\images\58ca768ef45ddddae56ae0202ce64d1d.jpg" title="Mod Slide Large" alt="msl"  description= "b" id="2"/>
 
-            <Modelcard img="\images\a291478910cce74e7025f13b5dc07cbb.jpg" title="Mod Slide Large-S" alt="msls"  description= "c"/>
+            <Modelcard img="\images\a291478910cce74e7025f13b5dc07cbb.jpg" title="Mod Slide Large-S" alt="msls"  description= "c" id="3"/>
 
-            <Modelcard img="\images\c8dd94e68aa55a69d162e8a47dc44381.jpg" title="Mod Slide Angle" alt="msangle"  description= "d"/>
+            <Modelcard img="\images\c8dd94e68aa55a69d162e8a47dc44381.jpg" title="Mod Slide Angle" alt="msangle"  description= "d" id="4"/>
 
-            <Modelcard img="\images\1608284b5ebf582d7ae497dc0b8b4e3c.jpg" title="Mod Slide Tria" alt="mstria"  description= "e"/>
+            <Modelcard img="\images\1608284b5ebf582d7ae497dc0b8b4e3c.jpg" title="Mod Slide Tria" alt="mstria"  description= "e" id="5"/>
 
-            <Modelcard img="\images\bbda9d22870ff927885148e6de80d0a2.jpg" title="Mod Slide Medium" alt="msmedium"  description= "f"/>
+            <Modelcard img="\images\bbda9d22870ff927885148e6de80d0a2.jpg" title="Mod Slide Medium" alt="msmedium"  description= "f" id="6"/>
 
           </div>
 
@@ -78,13 +78,13 @@ function karsilama() {
           {/* mod normal */}
           <div className='d-flex flex-wrap align-items-center justify-content-center'>
             
-            <Modelcard img="\images\3b06fb6a0713b50f18dae8bbdfea44da.jpg" title="Mod Double" alt="mdouble"  description= "1"/>
+            <Modelcard img="\images\3b06fb6a0713b50f18dae8bbdfea44da.jpg" title="Mod Double" alt="mdouble"  description= "1" id="7"/>
 
-            <Modelcard img="\images\cebb70fcdc7107e1b12a07fbe8982eb0.jpg" title="Mod Tria" alt="mtria"  description= "2"/>
+            <Modelcard img="\images\cebb70fcdc7107e1b12a07fbe8982eb0.jpg" title="Mod Tria" alt="mtria"  description= "2" id="8"/>
             
-            <Modelcard img="\images\6bb373ffe549e34833844d210b1039ca.jpg" title="Mod Flat" alt="mflat"  description= "3"/>
+            <Modelcard img="\images\6bb373ffe549e34833844d210b1039ca.jpg" title="Mod Flat" alt="mflat"  description= "3" id="9"/>
             
-            <Modelcard img="\images\77ac60f452f5660c62583981f869d422.jpg" title="Mod Flat Tria" alt="mflattria"  description= "4"/>
+            <Modelcard img="\images\77ac60f452f5660c62583981f869d422.jpg" title="Mod Flat Tria" alt="mflattria"  description= "4" id="10"/>
 
           </div>
 

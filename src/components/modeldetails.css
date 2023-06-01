@@ -1,0 +1,35 @@
+.mycontainer{
+
+    margin: 0 8%;
+}
+.title{
+    font-weight: bold;
+    font-size:4rem;
+    color: white; 
+    margin: 0 0 0 0;
+}
+.turuncu{
+    font-weight: bolder;
+    color: #ffc107;
+    margin: 0 0 0 0;
+}
+.details{
+    background-image: url("../../public/images/modsisart.jpg");
+    background-repeat: no-repeat;
+    border-top:4px solid #ffc107;
+    border-bottom:4px solid #ffc107;
+}
+.bb{
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+}
+
+.resimler{
+    margin-bottom: 1%;
+    margin-right: 1%;
+    width: 18vh;
+    height: auto;
+}
+small{
+    font-size: small;
+}

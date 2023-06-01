@@ -108,7 +108,7 @@ function Register() {
 
 
                 <div className='container mb-4 d-flex justify-content-center'>
-                    <button type="submit" className="btn btn-primary mt-4" onClick={save}>Save</button>
+                    <button type="submit" className="btn w-100" onClick={save}>Kayıt Ol</button>
 
                 </div>
                     
