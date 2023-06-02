@@ -7,8 +7,6 @@ import axios from "axios";
 
 function Login() {
 
-
-
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
         const navigate = useNavigate();
@@ -53,9 +51,6 @@ function Login() {
 
     function handleClick(){
       navigate("/register")}
-
-
-
 
   return (
     <div className='backg d-flex flex-column align-items-center justify-content-center'>

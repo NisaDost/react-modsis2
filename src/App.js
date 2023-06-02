@@ -3,12 +3,7 @@ import Home from './pages/home';
 import Login from "./components/login"
 import Register from "./components/register"
 import Modeldetails from "./components/modeldetails"
-
-
-
 import { Route, Routes } from 'react-router-dom';
-
-
 
 function App() {
   return (
@@ -18,13 +13,9 @@ function App() {
         <Route path='/login' element={<Login/>}  />
         <Route path='/register' element={<Register/>}  />
         <Route path='/modeldetails' element={<Modeldetails/>} />
-
-
-        
       </Routes>
 
     </div>
   );
 }
-
 export default App;

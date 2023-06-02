@@ -75,7 +75,7 @@ function karsilama() {
 
           <hr className='w-75 mx-auto '/>
 
-          {/* mod normal */}
+          {/* product cards */}
           <div className='d-flex flex-wrap align-items-center justify-content-center'>
             
             <Modelcard img="\images\3b06fb6a0713b50f18dae8bbdfea44da.jpg" title="Mod Double" alt="mdouble"  description= "1" id="7"/>

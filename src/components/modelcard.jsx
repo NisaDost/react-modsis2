@@ -1,19 +1,14 @@
-import React from 'react'
-import "./modelcard.css"
-import { useNavigate, useParams } from 'react-router-dom';
+import React from 'react';
+import "./modelcard.css";
+import { useNavigate } from 'react-router-dom';
 
 
+function Modelcard(props) {
 
-
-function modelcard(props) {
-
-    /*const navigate = useNavigate();
-    const {id} = useParams();
+    const navigate = useNavigate();
 
     function handleClick(){
-    navigate("/modeldetails")
-        
-    }*/
+        navigate("/modeldetails")}
 
   return (
     <span className='m-3 size'>
@@ -35,7 +30,7 @@ function modelcard(props) {
                             <p class="card-text"><small>{props.description}</small></p>
                         </div>
                         
-                        <a href="" className='btn' role='button' onClick="" >Detaylar</a>
+                        <a href="" className='btn' role='button' onClick={handleClick} >Detaylar</a>
                     </div>
 
                 </div>
@@ -49,4 +44,4 @@ function modelcard(props) {
   )
 }
 
-export default modelcard
+export default Modelcard

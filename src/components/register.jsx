@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import "./loginregister.css"
 import { useNavigate } from 'react-router-dom'
 import React, { useState } from 'react';
@@ -38,8 +37,6 @@ function Register() {
             alert(err);
         }
     }
-
-
 
     function handleClick(){
       navigate("/login")}
